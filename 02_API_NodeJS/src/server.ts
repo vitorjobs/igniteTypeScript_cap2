@@ -19,9 +19,9 @@ app.post("/courses", (request, response) =>{
   }) 
 })
 
-app.use(categoriesRoutes)
+app.use(categoriesRoutes, )
 
 app.listen(3000, () =>{
-    console.log("Server On In PORT 3000 !!");
+  console.log("Server On In PORT 3000 !!");
 
 })
