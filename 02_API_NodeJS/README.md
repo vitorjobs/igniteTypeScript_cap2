@@ -22,3 +22,8 @@
   * Atribuir o valor do atributo como opcional/obrigatório
   * Definição de valor por "Default"
   * Usar a interface
+
+## Debug - Configuração do arquivo
+
+  * Configuração do *Debuger* - [img]
+  * Parâmetro *--inspect* no script *dev*
