@@ -9,15 +9,19 @@ const categoriesRoutes = Router()
 	categoriesRoutes.post("/", (request, response) =>{
 		const {name, description} = request.body
 
-		const category: Category ={
-			name, 
+		const category = new Category ()
+
+    Object.assign(category, {
+      name, 
 			description,
 			created_at: new Date(),
-			id: uuidV4()
-		}
-		categories.push(category)
+    })
+	
+		  categories.push(category)
 
-		return response.status(201).send()
+		return response.status(201).json({
+      category
+    })
 	})	
 
 export {categoriesRoutes} 
