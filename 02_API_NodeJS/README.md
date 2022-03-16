@@ -14,16 +14,19 @@
     * --ignore-watch node_modules - Ignorar atualização do node_modules
     * -- respawn - sempra dar roload
     
-## Sobre Interface
+## Sobre Models
 
   ![Event Loop](./.github/bibliotecas.gif)
 
-  * Criar uma interface
+  * Criar uma Model
   * Atribuir o valor do atributo como opcional/obrigatório
-  * Definição de valor por "Default"
-  * Usar a interface
+  * Definição de valor por "Default
 
-## Debug - Configuração do arquivo
+## Repositórios
 
-  * Configuração do *Debuger* - [img]
-  * Parâmetro *--inspect* no script *dev*
+  * Manipulação de dados da aplicação
+  
+## Model
+
+  * Modelagem de dados da aplicação
+  
