@@ -30,3 +30,17 @@
 
   * Modelagem de dados da aplicação
   
+
+# ENTENDENDO O S.O.L.I.D
+
+## Melhores práticas
+ *S = Princípio da responsabilidade única.*
+
+ *O = Princípio aberto/fechado.*
+
+ *L = Princípio da substiruição de LISKOV.*
+
+ *I = Princípio da segregação de Interface.*
+
+ *D = Princípio da inversão de dependência.*
+  
