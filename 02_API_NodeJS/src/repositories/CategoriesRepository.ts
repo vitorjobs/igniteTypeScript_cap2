@@ -27,8 +27,15 @@ class CategoriesRepository {
 		this.categories.push(category)
   }
 
+  // LISTAR TODAS AS CATEGORIAS
   list(): Category[]{
     return this.categories
+  }
+
+  //BUSCAR CATEGORIAS POR NOME PARA VALIDAR NO ENDPOINT DE CRIAÇÃO DE CATEGORIAS
+  findByName(name: string): Category{
+    const category = this.categories.find((category) => category.name === name)
+    return category
   }
 }
 
