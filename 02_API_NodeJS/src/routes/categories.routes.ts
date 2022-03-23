@@ -1,20 +1,17 @@
-import {Router} from 'express'
-import {CategoriesRepository} from '../modules/cars/repositories/CategoriesRepository'
+import { Router } from 'express'
+import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository'
 import { createCategoryController } from '../modules/cars/useCases/CreateCategory'
-import {CreateCategoryUseCase} from '../modules/cars/useCases/CreateCategory/CreateCategoryUseCase'
+import { listCategoriesController } from '../modules/cars/useCases/listCategories'
 
 const categoriesRoutes = Router()
-const categoriesRepository = new CategoriesRepository()
-//const categoriesRepository = new PostgresCategoriesRepository
+const categoriesRepository = CategoriesRepository.getInstance()
 
 categoriesRoutes.post("/", (request, response) => {
   return createCategoryController.handle(request, response)
 })
 
 categoriesRoutes.get("/", (request, response) => {
-  const all = categoriesRepository.list()
-
-  return response.json(all)
+  return listCategoriesController.handle(request, response)
 })
 
 export {categoriesRoutes} 
