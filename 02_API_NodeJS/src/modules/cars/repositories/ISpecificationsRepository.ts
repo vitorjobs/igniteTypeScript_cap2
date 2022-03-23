@@ -1,4 +1,4 @@
-import { Category } from "../model/Category"
+import { Specification } from "../model/Specification"
 
 // QUANDO O REPOSITÓRIO FOI INICIADO O `SPECIFICATIONS` SERÁ INICIADO TAMBÉM
 
@@ -9,6 +9,7 @@ interface ICreateSpecificationDTO{
 
 interface ISpecificationsRepository {
   create({name, description}: ICreateSpecificationDTO): void
+  findByName(name: string): Specification
 }
 
 export {ISpecificationsRepository, ICreateSpecificationDTO}
