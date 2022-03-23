@@ -1,13 +1,8 @@
 import { Category } from "../model/Category"
+import { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository"
 
-// QUANDO O REPOSITÓRIO FOI INICIADO O `CATEGORIES` SERÁ INICIADO TAMBÉM
 
-interface ICreateCategoryDTO{
-  name: string,
-  description: string
-}
-
-class CategoriesRepository {
+class CategoriesRepository  implements ICategoriesRepository{
   private categories: Category []
 
   constructor(){
