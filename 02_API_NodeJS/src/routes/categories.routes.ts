@@ -4,8 +4,8 @@ import { PostgresCategoriesRepository } from '../modules/cars/repositories/Postg
 import {CreateCategoryService} from '../modules/cars/services/CreateCategoryService'
 
 const categoriesRoutes = Router()
-//const categoriesRepository = new CategoriesRepository()
-const categoriesRepository = new PostgresCategoriesRepository
+const categoriesRepository = new CategoriesRepository()
+//const categoriesRepository = new PostgresCategoriesRepository
 
 categoriesRoutes.post("/", (request, response) => {
   const {name, description} = request.body
