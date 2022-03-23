@@ -1,16 +1,14 @@
 import { Category } from "../model/Category"
 
-// QUANDO O REPOSITÓRIO FOI INICIADO O `CATEGORIES` SERÁ INICIADO TAMBÉM
+// QUANDO O REPOSITÓRIO FOI INICIADO O `SPECIFICATIONS` SERÁ INICIADO TAMBÉM
 
-interface ICreateCategoryDTO{
+interface ICreateSpecificationDTO{
   name: string,
   description: string
 }
 
-interface ICategoriesRepository {
-  findByName(name: string): Category
-  list(): Category[]
-  create({name, description}: ICreateCategoryDTO): void
+interface ISpecificationsRepository {
+  create({name, description}: ICreateSpecificationDTO): void
 }
 
-export {ICategoriesRepository, ICreateCategoryDTO}
+export {ISpecificationsRepository, ICreateSpecificationDTO}
